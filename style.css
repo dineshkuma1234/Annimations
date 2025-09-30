@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #111;
+    padding: 20px;
+}
+
+#box {
+    height: 200px;
+    width: 200px;
+    background-color: crimson;
+    border-radius: 10px;
+    position: absolute;
+
+    animation-name: leftToRight;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards; /*forwards means it will retain the last keyframe state after animation ends*/
+    animation-iteration-count: infinite;
+    animation-direction: alternate; /*alternate means it will play the animation in reverse on every alternate iteration*/
+    animation-timing-function: ease-in-out; /*ease-in-out means it will start slow, then go fast in the middle, and end slow*/
+}
+
+h2{
+    color: white;
+}
+#gsap{
+     height: 200px;
+    width: 200px;
+    background-color: crimson;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.circle{
+    height: 200px;
+    width: 200px;
+    background-color: crimson;
+    border-radius: 100px;
+}
+
+#box1{
+    height: 100px;
+    width: 100px;
+    background-color: crimson;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+#box2{
+    height: 100px;
+    width: 100px;
+    background-color: #5714dc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+#box3{
+    height: 100px;
+    width: 100px;
+    background-color: #14dc85;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+@keyframes leftToRight {
+    /* from{
+        left: 0%;
+        top: 0%;
+        background-color: crimson;
+        rotate: 0deg;
+    }
+    to{
+        left: 70%;
+        top: 50%;
+        background-color: blue;
+        rotate: 360deg;
+    } */
+
+
+    0% {
+        left: 0%;
+        top: 0%;
+        background-color: crimson;
+        rotate: 0deg;
+    }
+    
+    50%{
+        left: 70%;
+        top: 0%;
+        background-color: yellow;
+        rotate: 180deg;
+    }
+
+    100% {
+        left: 70%;
+        top: 50%;
+        background-color: blue;
+        rotate: 360deg;
+
+    }
+}
+
+
+h1{
+    font-size: 50px;
+    font-style: italic;
+    font-weight: 600;
+    color: thistle;
+}
+
+h1::after{
+   content: ' My name is Dinesh ';
+}
+
+h1::before{
+   content: 'good morning ';
+   color: orchid;
+}
